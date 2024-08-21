@@ -1,15 +1,15 @@
-# API-for-DID
+# API for DID
 Standard API for verifying and managing decentralized identifiers (DIDs) that allows other dApps to interact with your service for user authentication, you can use a RESTful API approach. This API will provide functionality for creating, verifying, and retrieving information about DIDs.
 
 ###1. Project Initialization
-```bash
+```
 npm init -y
 npm install express body-parser snarkyjs
 ```
 
 ###2. Creating the Server Application
 Create a server.js file where the API will be defined:
-```javascript
+```
 const express = require('express');
 const bodyParser = require('body-parser');
 const { Field, Signature, PublicKey } = require('snarkyjs');
