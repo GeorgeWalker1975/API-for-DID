@@ -1,13 +1,13 @@
 # API for DID
 Standard API for verifying and managing decentralized identifiers (DIDs) that allows other dApps to interact with your service for user authentication, you can use a RESTful API approach. This API will provide functionality for creating, verifying, and retrieving information about DIDs.
 
-###1. Project Initialization
+1. Project Initialization
 ```
 npm init -y
 npm install express body-parser snarkyjs
 ```
 
-###2. Creating the Server Application
+2. Creating the Server Application
 Create a server.js file where the API will be defined:
 ```
 const express = require('express');
@@ -82,8 +82,9 @@ app.listen(PORT, () => {
 });
 ```
 
-###API Route Descriptions
-#####POST /create-did
+API Route Descriptions
+
+POST /create-did
 
 - Description: Creates a new DID for the specified public key.
 - Parameters:
@@ -94,7 +95,7 @@ app.listen(PORT, () => {
     - Success: { message: 'DID successfully created.' }
     - Error: { error: 'Error creating DID.' }
 
-#####POST /verify-did
+POST /verify-did
 
 - Description: Verifies the validity of the DID for the specified public key.
 - Parameters:
@@ -104,7 +105,7 @@ app.listen(PORT, () => {
     - Success: { valid: true/false }
     - Error: { error: 'Error verifying DID.' }
 
-#####GET /get-did-info/:publicKey
+GET /get-did-info/:publicKey
 
 - Description: Returns the information about the DID associated with the specified public key.
 - Parameters:
